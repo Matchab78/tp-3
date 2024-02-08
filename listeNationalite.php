@@ -28,7 +28,7 @@ $lesNationalites=$req->fetchAll();
         echo "<td class='col-md-2'>$nationalite->num</td>";
         echo "<td class='col-md-8'>$nationalite->libelle</td>";
         echo "<td class='col-md-2'>
-            <a href='' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
+            <a href='formModifNationalite.php?num=$nationalite->num' class='btn btn-dark'><i class='fa-solid fa-pen'></i></a>
             <a href='' class='btn btn-danger'><i class='fa-solid fa-trash-alt'></i></a>
         </td>";
         echo "</tr>";
