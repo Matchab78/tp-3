@@ -79,7 +79,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-flag"></i>  Gestion des nationalités</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="listeNationalite.php">Liste des nationalités</a>
-          <a class="dropdown-item" href="#">Ajouter une nationalitée</a>
+          <a class="dropdown-item" href="formAjoutNationalite.php">Ajouter une nationalitée</a>
         </div>
       </li>
     </ul>

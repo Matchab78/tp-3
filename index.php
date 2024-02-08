@@ -9,7 +9,7 @@
     <div class="container">
       <h1 class="display-3">Hello, world!</h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <p><a class="btn btn-dark btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
@@ -19,7 +19,7 @@
       <div class="col-md-4">
         <h2>Heading</h2>
         <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-dark" href="#" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4">
         <h2>Heading</h2>
@@ -39,7 +39,7 @@
   <div class="container">
     <div class="row">
     <div class="col-md-4">
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h4 class="card-title">Primary card title</h4>
@@ -48,7 +48,7 @@
 </div>
     </div>
     <div class="col-md-4">
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h4 class="card-title">Primary card title</h4>
@@ -57,7 +57,7 @@
 </div>
     </div>
     <div class="col-md-4">
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
     <h4 class="card-title">Primary card title</h4>
