@@ -64,7 +64,7 @@
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-book"></i>  Gestion des genres</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="listeGenre.php">Liste des genres</a>
-          <a class="dropdown-item" href="#">Ajouter un genre</a>
+          <a class="dropdown-item" href="formAjoutGenre.php">Ajouter un genre</a>
         </div>
       </li>
       <li class="nav-item dropdown">
