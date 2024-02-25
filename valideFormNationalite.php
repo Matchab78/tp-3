@@ -30,7 +30,7 @@ if($nb==1){
 ?>
     </div>
 </div>
-<a href="listeNationalites.php" class="btn btn-dark">Revenir à la liste des nationalitées</a>
+<a href="listeNationalite.php" class="btn btn-dark">Revenir à la liste des nationalitées</a>
 
 </div>
 
