@@ -1,5 +1,5 @@
 <?php include "header.php";
-include "connexionpdo.php";
+include "connexionPdo.php";
 $action=$_GET['action'];
 $num=$_POST['num'];
 $libelle=$_POST['libelle'];
