@@ -24,7 +24,7 @@ if(!empty($_SESSION['message'])){
 <div class="container mt-5">
 <div class="row pt-3">
     <div class="col-9"><h2>Liste des genres</h2></div>
-    <div class="col-3"><a href="formAjoutGenre.php" class='btn btn-success'><i class="fa-solid fa-plus"></i>  Créer un genre</a></div>
+    <div class="col-3"><a href="formGenre.php" class='btn btn-success'><i class="fa-solid fa-plus"></i>  Créer un genre</a></div>
 </div>
 <table class="table table-hover table-striped">
   <thead>
@@ -42,7 +42,7 @@ if(!empty($_SESSION['message'])){
         echo "<td class='col-md-2'>$genre->num</td>";
         echo "<td class='col-md-8'>$genre->libelle</td>";
         echo "<td class='col-md-2'>
-            <a href='formAjoutGenre.php?action=Modifier&num=$genre->num' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
+            <a href='formGenre.php?action=Modifier&num=$genre->num' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
             <a href='#modalSupp' data-toggle='modal' data-message='Suppression de ce genre ?'data-suppression='supprimerGenre.php?num=$genre->num' class='btn btn-danger'><i class='fa-solid fa-trash-alt'></i></a>
         </td>";
         echo "</tr>";
