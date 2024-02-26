@@ -1,9 +1,9 @@
 <?php include "header.php";
 include "connexionPdo.php";
-$req=$monPdo->prepare("select * from nationalite");
+$req=$monPdo->prepare("select n.num, n.libelle as 'libNation', c.libelle as 'libContinent' from nationalite n,  contient c where n.numContinent=c.num order by n.libelle");
 $req->setFetchMode(PDO::FETCH_OBJ);
-$req->execute();
 $lesNationalites=$req->fetchAll();
+$req->execute();
 
 if(!empty($_SESSION['message'])){
   $mesMessages=$_SESSION['message'];
@@ -30,7 +30,8 @@ if(!empty($_SESSION['message'])){
   <thead>
     <tr class="d-flex">
       <th scope="col" class="col-md-2">Numéro</th>
-      <th scope="col" class="col-md-8">Libellé</th>
+      <th scope="col" class="col-md-5">Libellé</th>
+      <th scope="col" class="col-md-3">Continent</th>
       <th scope="col" class="col-md-2">Actions</th>
     </tr>
   </thead>
@@ -40,7 +41,8 @@ if(!empty($_SESSION['message'])){
          
         echo "<tr class='d-flex'>";
         echo "<td class='col-md-2'>$nationalite->num</td>";
-        echo "<td class='col-md-8'>$nationalite->libelle</td>";
+        echo "<td class='col-md-5'>$nationalite->libNation</td>";
+        echo "<td class='col-md-3'>$nationalite->libContinent</td>";
         echo "<td class='col-md-2'>
             <a href='formNationalite.php?action=Modifier&num=$nationalite->num' class='btn btn-dark'><i class='fa-solid fa-pen'></i></a>
             <a href='#modalSupp' data-toggle='modal' data-message='Suppression de cette nationalitée ?'data-suppression='supprimerNationalite.php?num=$nationalite->num' class='btn btn-danger'><i class='fa-solid fa-trash-alt'></i></a>

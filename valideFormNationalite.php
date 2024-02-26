@@ -3,14 +3,17 @@ include "connexionPdo.php";
 $action=$_GET['action'];
 $num=$_POST['num'];
 $libelle=$_POST['libelle'];
+$continent=$_POST['continent'];
 
 if($action == "Modifier"){
-    $req=$monPdo->prepare("update nationalite set libelle=:libelle where num=:num");
+    $req=$monPdo->prepare("update nationalite set libelle= :libelle, numContinent= :continent where num= :num");
     $req->bindParam(':num', $num);
     $req->bindParam(':libelle', $libelle);
+    $req->bindParam(':continent', $continent);
 }else{
-    $req=$monPdo->prepare("insert into nationalite(libelle) values(:libelle)");
+    $req=$monPdo->prepare("insert into nationalite(libelle, numContinent) values(:libelle, :continent)");
     $req->bindParam(':libelle', $libelle);
+    $req->bindParam(':continent', $continent);
 }
 $nb=$req->execute();
 $message= $action == "Modifier" ? "modifiée" : "ajoutée";
