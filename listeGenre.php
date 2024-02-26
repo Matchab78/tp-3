@@ -28,8 +28,8 @@ $lesGenres=$req->fetchAll();
         echo "<td class='col-md-2'>$genre->num</td>";
         echo "<td class='col-md-8'>$genre->libelle</td>";
         echo "<td class='col-md-2'>
-            <a href='' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
-            <a href='supprimerGenre.php?num=$genre->num' class='btn btn-danger'><i class='fa-solid fa-trash-alt'></i></a>
+            <a href='formAjoutGenre.php?action=Modifier&num=$genre->num' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
+            <a href='#modalSupp' data-toggle='modal' data-message='Suppression de ce genre ?'data-suppression='supprimerGenre.php?num=$genre->num' class='btn btn-danger'><i class='fa-solid fa-trash-alt'></i></a>
         </td>";
         echo "</tr>";
     }
