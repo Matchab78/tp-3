@@ -1,6 +1,13 @@
 <?php include "header.php";
 include "connexionPdo.php";
-$req=$monPdo->prepare("select * from genre");
+$libelle="";
+$textReq="select * from genre";
+if(!empty($_GET)){
+  $libelle = $_GET['libelle'];
+  if( $libelle != "") {$textReq.= " where libelle like '%".$libelle."%'";}
+}
+$textReq.=" order by genre.libelle";
+$req=$monPdo->prepare($textReq);
 $req->setFetchMode(PDO::FETCH_OBJ);
 $req->execute();
 $lesGenres=$req->fetchAll();
@@ -26,6 +33,17 @@ if(!empty($_SESSION['message'])){
     <div class="col-9"><h2>Liste des genres</h2></div>
     <div class="col-3"><a href="formGenre.php" class='btn btn-success'><i class="fa-solid fa-plus"></i>  Créer un genre</a></div>
 </div>
+
+<form action="" method="get" class="border border-primary rounded p-3 mt-3 mb-3">
+  <div class="row">
+    <div class="col"><input type="text" class="form-control" id="libelle" placeholder="saisir le libellé" name="libelle" value="<?php echo $libelle ?>"></div>
+    <div class="col"></div>
+    <div class="col">
+      <button type="submit" class="btn btn-success btn-block"> Rechercher </button>
+    </div>
+  </div>
+</form>
+
 <table class="table table-hover table-striped">
   <thead>
     <tr class="d-flex">
