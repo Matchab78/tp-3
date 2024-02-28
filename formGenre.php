@@ -6,8 +6,10 @@ if($action == "Modifier"){
     $req=$monPdo->prepare("select * from genre where num= :num");
     $req->setFetchMode(PDO::FETCH_OBJ);
     $req->bindParam(':num', $num);
-    $leGenre=$req->fetch();
     $req->execute();
+    $leGenre=$req->fetch();
+
+    
 }
 ?>
 
@@ -16,12 +18,12 @@ if($action == "Modifier"){
 <form action="valideFormGenre.php?action=<?php echo $action ?>" method ="post" class="col-md-6 offset-md-3 border border-dark p-3 rounded">
     <div class="form-group">
         <label for="libelle">Libellé</label>
-        <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value='<?php if($action == "Modifier"){echo $leGenre->libelle;} ?>'>
+        <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value="<?php if($action == "Modifier") {echo $leGenre->libelle ;} ?>">
     </div>
-    <input type="hidden" id="num" name="num" value="<?php if($action == "Modifier"){ echo $leGenre->num;} ?>">
+    <input type="hidden" id="num" name="num" value="<?php if($action == "Modifier") { echo $leGenre->num ;} ?>">
     <div class="row">
         <div class="col"><a href="listeGenre.php" class='btn btn-dark btn-block'>Revenir à la liste</a></div>
-        <div class="col"><button type='submit' class='btn btn-dark btn-block'> <?php echo $action ?> </button></div>
+        <div class="col"><button type='submit' class='btn btn-dark btn-block'> <?php echo $action ?> Ajouter </button></div>
     </div>
 </form>
 </div>
